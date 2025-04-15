@@ -47,4 +47,4 @@ This site blends minimalistic aesthetics with smooth animations and responsive d
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/mufasa-fashion-ui.git
+   git clone https://github.com/vinay-attili/mufasa-fashion-ui.git
