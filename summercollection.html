@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Grid</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navbar -->
+<nav class="bg-white shadow">
+  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="home.html" class="flex items-center space-x-2 text-2xl font-bold text-primary">
+      <!-- img src="logo.png" alt="Groot Logo" class="h-8 w-8"/> -->
+      <span>𝕄𝕌𝔽𝔸𝕊𝔸</span>
+    </a>
+
+    <!-- Navigation Links -->
+    <div class="flex items-center space-x-6">
+      <!-- Men Dropdown -->
+      <div class="relative group">
+        <button class="hover:text-primary font-medium">Men</button>
+        <div class="absolute left-0 mt-2 w-40 bg-white rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+          <a href="menShirt.html" class="block px-4 py-2 hover:bg-gray-100">Shirts</a>
+          <a href="mentshirts.html" class="block px-4 py-2 hover:bg-gray-100">T-Shirts</a>
+        </div>
+      </div>
+
+      <!-- Women -->
+      <div class="relative group">
+        <button class="hover:text-primary font-medium">Women</button>
+        <div class="absolute left-0 mt-2 w-40 bg-white rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+          <a href="womenDr.html" class="block px-4 py-2 hover:bg-gray-100">Dress</a>
+          <a href="womenup.html" class="block px-4 py-2 hover:bg-gray-100">Upper wear</a>
+          <a href="womenbottom.html" class="block px-4 py-2 hover:bg-gray-100">Bottom wear</a>
+        </div>
+      </div>
+      <div class="relative group">
+        <button class="hover:text-primary font-medium">Kids</button>
+        <div class="absolute left-0 mt-2 w-40 bg-white rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+          <a href="kidsb.html" class="block px-4 py-2 hover:bg-gray-100">Boys</a>
+          <a href="kidsh.html" class="block px-4 py-2 hover:bg-gray-100">Girls</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Icon -->
+    <div>
+      <a href="cart.html" class="relative">
+        <svg class="w-6 h-6 text-gray-700 hover:text-gray-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m10-9l2 9m-6-9v9" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+  <div class="container mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Example Product 1 -->
+      <div onclick="viewProduct('SHORT STRIPE COMBINATION DRESS', '₹ 6,950.00', 'Kids-B/kb10.JPG')" class="bg-white p-4 transition-transform duration-300 product-card cursor-pointer">
+        <img src="summercoll/sc1.jpg" alt="SHORT STRIPE COMBINATION DRESS" class="w-full h-auto mb-4">
+        <p class="text-sm text-gray-500">THICKLY STRIPED COTTON DRESS</p>
+        <p class="text-sm text-gray-500">₹ 2,589.00 <span class="line-through">₹ 5,350.00</span></p>
+      </div>
+
+      <!-- Example Product 2 -->
+      <div onclick="viewProduct('SLEEVELESS JUMPSUIT WITH BELT', '₹ 4,950.00', 'Kids-B/kb2.jpg')" class="bg-white p-4 transition-transform duration-300 product-card cursor-pointer">
+        <img src="summercoll/sc2.jpg" alt="SLEEVELESS JUMPSUIT WITH BELT" class="w-full h-auto mb-4">
+        <p class="text-sm text-gray-500">BLUE LENIN-COTTON SHIRT </p>
+        <p class="text-sm text-gray-500">₹ 3,459.00</p>
+      </div>
+
+      <!-- Continue adding other product cards here in similar fashion -->
+      <div onclick="viewProduct('STRAPLESS DRESS ZW COLLECTION', '₹ 4,950.00', 'Kids-B/kb3.jpg')" class="bg-white p-4 transition-transform duration-300 product-card cursor-pointer">
+        <img src="summercoll/sc3.jpg" alt="STRAPLESS DRESS ZW COLLECTION" class="w-full h-auto mb-4">
+        <p class="text-sm text-gray-500">STRIPED TEXTURED SUIT</p>
+        <p class="text-sm text-gray-500">₹ 3,549.00 <span class="line-through">
+            ₹ 5,350.00
+           </span> </p>
+      </div>
+      <div onclick="viewProduct('SATIN MIDI DRESS', '₹ 4,950.00', 'Kids-B/kb3.jpg')" class="bg-white p-4 transition-transform duration-300 product-card cursor-pointer">
+        <img src="summercoll/sc4.jpg" alt="SATIN MIDI DRESS" class="w-full h-auto mb-4">
+        <p class="text-sm text-gray-500">SATIN ZIGZAG DRESS</p>
+        <p class="text-sm text-gray-500">₹ 2,750.00</p>
+      </div>
+      <div onclick="viewProduct('ZW COLLECTION ASYMMETRIC PRINT DRESS', '₹ 3,950.00', 'Kids-B/kb3.jpg')" class="bg-white p-4 transition-transform duration-300 product-card cursor-pointer">
+        <img src="summercoll/sc5.jpg" alt="ZW COLLECTION ASYMMETRIC PRINT DRESS" class="w-full h-auto mb-4">
+        <p class="text-sm text-gray-500">GREEN SHIRT WITH STRIPE TEXTURED  </p>
+        <p class="text-sm text-gray-500">₹ 3,950.00</p>
+      </div>
+      <div onclick="viewProduct('FLORAL PRINT MINI DRESS', '₹ 3,550.00', 'Kids-B/kb3.jpg')" class="bg-white p-4 transition-transform duration-300 product-card cursor-pointer">
+        <img src="summercoll/sc6.jpg" alt="FLORAL PRINT MINI DRESS" class="w-full h-auto mb-4">
+        <p class="text-sm text-gray-500">DRESS WITH EMBROIDERED FRILLS</p>
+        <p class="text-sm text-gray-500">₹ 3,550.00</p>
+      </div>
+      <div onclick="viewProduct('FLORAL PRINT MINI DRESS', '₹ 3,550.00', 'Kids-B/kb3.jpg')" class="bg-white p-4 transition-transform duration-300 product-card cursor-pointer">
+        <img src="summercoll/sc7.jpg" alt="FLORAL PRINT MINI DRESS" class="w-full h-auto mb-4">
+        <p class="text-sm text-gray-500">STRIPE CHROCHET DRESS</p>
+        <p class="text-sm text-gray-500">₹ 3,550.00</p>
+      </div>
+     
+
+    </div>
+  </div>
+
+  <script>
+    function viewProduct(name, price, image) {
+      const product = { name, price, image };
+      localStorage.setItem("selectedProduct", JSON.stringify(product));
+      window.location.href = "product.html";
+    }
+  </script>
+</body>
+</html>
